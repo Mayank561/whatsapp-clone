@@ -1,14 +1,12 @@
-const express = require('express');
-
-const newConversation = require('../controller/conversation-controller.js');
-const getConversation = require('../controller/conversation-controller.js');
-const addUser = require('../controller/User-controller.js');
-const getUser = require('../controller/User-controller.js');
-const newMessage = require('../controller/message-controller.js');
-const upload = require('../utils/upload.js');
-
-const { newMessage: newMessageES6, getMessage } = require('../controller/message-controller.js');
-const { uploadImage, getImage } = require('../controller/image-controller.js');
+import express from 'express';
+import newConversation from '../controller/conversation-controller.js';
+import getConversation from '../controller/conversation-controller.js';
+import addUser from '../controller/User-controller.js';
+import getUser from '../controller/User-controller.js';
+import newMessage from '../controller/message-controller.js';
+import upload from '../utils/upload.js';
+import { newMessage as newMessageES6, getMessage } from '../controller/message-controller.js';
+import { uploadImage, getImage } from '../controller/image-controller.js';
 
 const route = express.Router();
 
