@@ -1,11 +1,12 @@
 import express from 'express';
-const cors = require('cors');
-const bodyParser = require('body-parser');
-const dotenv = require('dotenv');
-const Connection = require('./Config/mongoose.js');
-const Route = require('./routes/route.js');
+import cors from 'cors'; 
+import express from 'express';
+import bodyParser from 'body-parser';
+import dotenv from 'dotenv';
+import Connection from './Config/mongoose.js'; 
+import Route from './routes/route.js';
 
-dotenv.config(); 
+dotenv.config();
 
 const app = express();
 
@@ -15,7 +16,7 @@ app.use(cors());
 app.use('/', Route);
 Connection();
 
-const PORT = process.env.PORT || 5000; 
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
