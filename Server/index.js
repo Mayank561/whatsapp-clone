@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors'; 
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
-import Connection from './Config/mongoose.js'; 
+import Connection from './Config/mongoose'; 
 import Route from './routes/route.js';
 
 dotenv.config();
