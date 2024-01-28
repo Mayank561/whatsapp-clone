@@ -7,7 +7,13 @@ dotenv.config();
 const username = process.env.DB_USERNAME;
 const password = process.env.DB_PASSWORD;
 
-const { GridFsStorage } = multerGridFsStorage;
+let GridFsStorage;
+
+if (multerGridFsStorage.default) {
+  GridFsStorage = multerGridFsStorage;
+} else {
+  GridFsStorage = multerGridFsStorage.GridFsStorage;
+}
 
 const storage = new GridFsStorage({
     url: `mongodb://${username}:${password}@cluster2.vwiv9hd.mongodb.net/?retryWrites=true&w=majority`,
