@@ -1,5 +1,5 @@
-import Message from "../model/Message.js";
-import Conversation from '../model/Conversation.js';
+const Message = require ("../model/Message.js");
+const Conversation = require ('../model/Conversation.js');
 
 
 export const newMessage = async (request, response) => {

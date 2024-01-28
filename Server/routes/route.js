@@ -1,12 +1,14 @@
-import express from 'express';
+const express = require('express');
 
+const newConversation = require('../controller/conversation-controller.js');
+const getConversation = require('../controller/conversation-controller.js');
+const addUser = require('../controller/User-controller.js');
+const getUser = require('../controller/User-controller.js');
+const newMessage = require('../controller/message-controller.js');
+const upload = require('../utils/upload.js');
 
-import { newConversation, getConversation } from '../controller/conversation-controller.js';
-import { addUser, getUser } from '../controller/User-controller.js';
-import { newMessage, getMessage }from '../controller/message-controller.js';
-import { uploadImage, getImage } from '../controller/image-controller.js';
-
-const upload =  require('../utils/upload.js');
+const { newMessage: newMessageES6, getMessage } = require('../controller/message-controller.js');
+const { uploadImage, getImage } = require('../controller/image-controller.js');
 
 const route = express.Router();
 
@@ -21,6 +23,5 @@ route.get('/message/get/:id', getMessage);
 
 route.post('/file/upload', upload.single('file'), uploadImage);
 route.get('/file/:filename', getImage);
-
 
 export default route;
