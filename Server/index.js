@@ -1,9 +1,9 @@
-import express from 'express';
-import cors from 'cors';
-import bodyParser from 'body-parser';
-import dotenv from 'dotenv';
-import Connection from './Config/mongoose.js';
-import Route from './routes/route.js';
+const express = require('express');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const dotenv = require('dotenv');
+const Connection = require('./Config/mongoose.js');
+const Route = require('./routes/route.js');
 
 dotenv.config(); 
 
