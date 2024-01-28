@@ -1,11 +1,13 @@
 import multer from 'multer';
-import { GridFsStorage } from 'multer-gridfs-storage';
+import multerGridFsStorage from 'multer-gridfs-storage';
 import dotenv from 'dotenv';
 
 dotenv.config();
 
 const username = process.env.DB_USERNAME;
 const password = process.env.DB_PASSWORD;
+
+const { GridFsStorage } = multerGridFsStorage;
 
 const storage = new GridFsStorage({
     url: `mongodb://${username}:${password}@cluster2.vwiv9hd.mongodb.net/?retryWrites=true&w=majority`,
