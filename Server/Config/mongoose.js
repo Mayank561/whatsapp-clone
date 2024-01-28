@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const dotenv =  require('dotenv');
+const dotenv = require('dotenv');
 
 dotenv.config();
 
@@ -14,7 +14,6 @@ const Connection = async () => {
 
         console.log("MongoDB connected successfully");
 
-        // Additional log statements
         const db = mongoose.connection;
         db.on('error', console.error.bind(console, 'MongoDB connection error:'));
         db.once('open', () => {
@@ -25,4 +24,4 @@ const Connection = async () => {
     }
 };
 
-export default Connection;
+module.exports = Connection;
