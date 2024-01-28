@@ -1,6 +1,6 @@
-const multer = require('multer');
-const GridFsStorage = require('multer-gridfs-storage');
-const dotenv = require('dotenv');
+import multer from 'multer';
+import { GridFsStorage } from 'multer-gridfs-storage';
+import dotenv from 'dotenv';
 
 dotenv.config();
 
@@ -24,4 +24,4 @@ const storage = new GridFsStorage({
     }
 });
 
-module.exports = multer({ storage });
+export default multer({ storage });
