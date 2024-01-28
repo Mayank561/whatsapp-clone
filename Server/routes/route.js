@@ -6,7 +6,7 @@ import { addUser, getUser } from '../controller/User-controller.js';
 import { newMessage, getMessage }from '../controller/message-controller.js';
 import { uploadImage, getImage } from '../controller/image-controller.js';
 
-import upload from '../utils/upload.js';
+const upload =  require('../utils/upload.js');
 
 const route = express.Router();
 
