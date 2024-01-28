@@ -16,7 +16,8 @@ const AccountProvider = ({children}) => {
     const socket = useRef();
 
     useEffect(() => {
-        socket.current = io('ws://localhost:8000');
+        // ws://localhost:8000
+        socket.current = io('https://whatsapp-socket-qm62.onrender.com');
     }, [])
 
     return (

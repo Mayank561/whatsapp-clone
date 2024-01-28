@@ -53,7 +53,7 @@ const LoginDialog = () => {
   const { setAccount, showloginButton, setShowloginButton, setShowlogoutButton } = useContext(AccountContext);
 
   const onLoginSuccess = async (res) => {
-    let decoded = jwtDecode(res.credential);  // Corrected usage
+    let decoded = jwtDecode(res.credential);  
     setAccount(decoded);
     setShowloginButton(false);
     setShowlogoutButton(true);
