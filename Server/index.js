@@ -1,6 +1,5 @@
 import express from 'express';
 import cors from 'cors'; 
-import express from 'express';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import Connection from './Config/mongoose.js'; 
