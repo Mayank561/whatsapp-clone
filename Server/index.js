@@ -11,7 +11,13 @@ const app = express();
 
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors());
+
+app.use(cors({
+  origin: 'https://whatsapp-clone-client-delta.vercel.app',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+}));
+
 app.use('/', Route);
 Connection();
 
